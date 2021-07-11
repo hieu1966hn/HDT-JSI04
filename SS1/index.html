@@ -35,19 +35,37 @@
             // Setup: Hàm khởi tạo 
             constructor(_width, _height, _color) {
                 console.log("the Rectangle is being created");
-                    // key   =   value truyen vao
+                // key   =   value truyen vao
                 this._width = _width;
                 this._height = _height;
                 this._color = _color;
             }
 
+            // this is method
+            getArea() {
+                return this._width * this._height
+            }
+
+            printDescription() {
+                console.log(`I am a rectangle of ${this._width}x${this._height}
+                and I am ${this._color}`);
+            }
         }
 
 
-        let myRectangle = new Rectangle(3, 5, 'Blue');
+        let myRectangle1 = new Rectangle(3, 5, 'Blue');
+        let myRectangle2 = new Rectangle(10, 5, 'red');
+
+        console.log(typeof (myRectangle2));
+
+
+
+
+        console.log("Diện tích HCN 1: ", myRectangle1.getArea());
+        console.log("Diện tích HCN 2: ", myRectangle2.getArea());
 
         // khởi tạo biến myRectangle thuộc lớp Rectangle
-        // kladjf;lksdf
+
 
 
     </script>
