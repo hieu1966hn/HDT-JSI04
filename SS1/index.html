@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="title">Classes</h2>
+
+    <script>
+        /*
+        Class  ->  Object
+
+
+
+        Instance Properties: what they have
+            - name
+            - age
+            - height
+        
+
+        Instance Method: what they do
+            - talk
+            - run
+            - jump
+        */
+
+
+        // khoi tạo class (1 lớp)
+        class Rectangle {
+            // Setup: Hàm khởi tạo 
+            constructor(_width, _height, _color) {
+                console.log("the Rectangle is being created");
+                    // key   =   value truyen vao
+                this._width = _width;
+                this._height = _height;
+                this._color = _color;
+            }
+
+        }
+
+
+        let myRectangle = new Rectangle(3, 5, 'Blue');
+
+        // khởi tạo biến myRectangle thuộc lớp Rectangle
+
+
+    </script>
+</body>
+
+</html>
