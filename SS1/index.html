@@ -11,7 +11,7 @@
 <body>
     <h2 id="title">Classes</h2>
 
-    <script>
+    <!-- <script>
         /*
         Class  ->  Object
 
@@ -68,6 +68,42 @@
 
 
 
+    </script> -->
+
+    <script>
+        // geter and Seter in Classes
+        class Square { // hinh vuong
+            constructor(_width) {
+                this.width = _width;
+                this.height = _width;
+                this.numOfRequestForArea= 0;
+            }
+
+            // su dung geter
+            get area() {
+                this.numOfRequestForArea++;
+                return this.width * this.height
+            }
+
+            set area(area){ // set lai gia tri cho ..
+                    this.width = Math.sqrt(area); // => 5
+                    this.height=this.width
+            }
+
+        }
+
+
+        let square1 = new Square(4); // truyen do dai canh 
+        console.log(square1.area); // 16
+
+        square1.area = 25;
+        // console.log(square1.width); //  5
+        // console.log(square1.height);//  5
+        console.log(square1.area);
+        console.log(square1.area);
+        console.log(square1.area);
+        console.log(square1.area);
+        
     </script>
 </body>
 
