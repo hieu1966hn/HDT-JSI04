@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class People {
+        constructor(name, age, address) {
+          this.name = name;
+          this.age = age;
+          this.address = address;
+        }
+
+        // clasess ****
+        set(prop, value) {
+          this[prop] = value;
+          return this[prop];
+        }
+
+        get(prop) {
+          return this[prop];
+        }
+      }
+
+      class Students extends People {
+        constructor(name, age, address, id, math, physical, chemistry) {
+          super(name, age, address); // kế thừa từ cha nó 3 thuộc tính trên
+          this.id = id;
+          this.math = math;
+          this.physical = physical;
+          this.chemistry = chemistry;
+        }
+
+        GPA() {
+          // convert từ string => number
+          if (typeof (this.math + this.physical + this.chemistry) !== "number") return "Scores must be number";
+
+          const arr = [this.math, this.physical, this.chemistry];
+          const total = arr.reduce((a, current) => a + current);
+          const average = total / arr.length;
+          return average;
+        }
+      }
+
+      let student = new Students("NAP", 14, "Hanoi", 123, 9.5, 8.5, 9);
+    </script>
+  </body>
+</html>

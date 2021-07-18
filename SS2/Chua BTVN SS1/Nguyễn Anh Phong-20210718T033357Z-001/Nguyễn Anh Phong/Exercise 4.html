@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Student {
+        constructor(id, fullName, address, priority, lever) {
+          this.id = id;
+          this.fullName = fullName;
+          this.address = address;
+          this.priority = priority;
+          this.lever = lever.toUpperCase();
+          this.subjects = lever === "A" ? ["Math", "Physics", "Chemistry"] : lever === "B" ? ["Math", "Chemistry", "Biology"] : lever === "C" ? ["Literature", "History", "Geography"] : [];
+        }
+      }
+
+      class TuyenSinh {
+        constructor(allStudent) {
+          this.allStudent = allStudent;
+        }
+
+        add(student) {
+          this.allStudent.push(student);
+        }
+
+        displayAll() {
+          return this.allStudent
+            .map((e) => {
+              let str = "";
+              for (const key in e) {
+                let index = Object.keys(e).indexOf(key);
+                str += `${key}: ${e[key]}${index + 1 < Object.keys(e).length ? ", " : ""}`;
+              }
+              return str;
+            })
+            .join("; ");
+        }
+
+        searchById(id) {
+          return this.allStudent.find((e) => e.id === id);
+        }
+
+        quit() {
+          close();
+        }
+      }
+
+      let allStudent = [new Student(123, "NAP", "Hanoi", null, "A"), new Student(456, "Phong", "HCM", null, "B")];
+
+      let tuyenSinh = new TuyenSinh(allStudent);
+    </script>
+  </body>
+</html>

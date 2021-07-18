@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+
+        set_value(prop, value) {
+          this[prop] = value;
+        }
+
+        send_message() {
+          return `My name is ${this.name} and I'm ${this.age} year${this.age > 1 ? "s" : ""} old`;
+        }
+      }
+
+      const Zebra = new Animal("Zebra", 2);
+      const Dolphin = new Animal("Dolphin", 3);
+    </script>
+  </body>
+</html>
