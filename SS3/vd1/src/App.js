@@ -2,33 +2,33 @@ import logo from './logo.svg';
 import './App.css';
 import React, { Component } from "react"
 
-function One(props) {
-  return (
-    <h1>{props.title}</h1>
-  )
-}
+// function One(props) {
+//   return (
+//     <h1>{props.title}</h1>
+//   )
+// }
 
 //C2: Định nghĩa ra 1 thẻ mới => sau đó nhúng vào App là đc 
-let Two = function () {
-  return <h1>This is number Two</h1>
-}
+// let Two = function () {
+//   return <h1>This is number Two</h1>
+// }
 
 
 // C3:
-let Three = () => {
-  return <h1>This is number three</h1>
-}
+// let Three = () => {
+//   return <h1>This is number three</h1>
+// }
 
 // C4: class component: Tao ra 1 thẻ (component) trong HTML
-class Four extends Component {
-  render() {
-    return (
-      <div>
-        <h1>This is Number four</h1>
-      </div>
-    );
-  }
-}
+// class Four extends Component {
+//   render() {
+//     return (
+//       <div>
+//         <h1>This is Number four</h1>
+//       </div>
+//     );
+//   }
+// }
 
 
 function ImageCard1(props) {
