@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --message: "Turn on Dark Mode on your device to see dark mode on Google Search";
+    }
+
+    h1::before {
+      content: var(--message);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      h1::before {
+        --message: "Turn off Dark Mode on your device if you don't want to see Dark Mode on Google Search";
+      }
+    }
+  </style>
+  <body style="width: 300px">
+    <h1></h1>
+  </body>
+</html>

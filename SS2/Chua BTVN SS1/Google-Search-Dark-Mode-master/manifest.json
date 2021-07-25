@@ -1,0 +1,18 @@
+{
+  "name": "Google Search Dark Mode",
+  "description": "Dark mode for Google Search",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/*"],
+      "js": ["./script.js"],
+      "css": ["./style.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

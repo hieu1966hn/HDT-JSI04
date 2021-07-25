@@ -1,0 +1,32 @@
+@media (prefers-color-scheme: dark) {
+  .dark-mode {
+    filter: invert(93%);
+  }
+
+  img,
+  svg,
+  .WaWKOe {
+    filter: invert(100%);
+  }
+
+  .WaWKOe img {
+    filter: invert(0%);
+  }
+
+  .l,
+  .s4sxYc,
+  .vfxGNc,
+  .LC20lb,
+  .mCBkyc,
+  .exp-r,
+  .YjtGef,
+  .vLK3gc a,
+  .vcVZ7d a,
+  .HiHjCd a,
+  .pcTkSc span,
+  .MXl0lf span,
+  .P1usbc span {
+    filter: invert(100%);
+    color: #3a8dff !important;
+  }
+}
