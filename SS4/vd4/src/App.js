@@ -9,10 +9,10 @@ function App() {
   return (
     <div className="_vd4">
       <Navbar />
-      <Header/>
-      <ContentSection reversed={true}/>
-      <ContentSection reversed={false}/>
-      <ContentSection reversed={true}/>
+      <Header />
+      <ContentSection reversed={true} img={"assets/img/01.jpg"} />
+      <ContentSection reversed={false} img={"assets/img/02.jpg"} />
+      <ContentSection reversed={true} img={"assets/img/03.jpg"} />
     </div>
   );
 }
