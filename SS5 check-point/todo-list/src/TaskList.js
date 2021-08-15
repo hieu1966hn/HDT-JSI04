@@ -1,16 +1,25 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import TodoList from "./TodoList";
+import AddTask from "./AddTask"
 
 class TaskList extends Component {
     constructor(props) {
         super(props);
         //  ke thua 
-        this.state = { 
-            tasks:['Task 1', "Task 2"],
+        this.state = {
+            tasks: ['Task 1', "Task 2"],
         }
     }
 
-    render(){
+    setStatus = () => {
+        this.setState = (
+            {
+                showAddForm: true
+            }
+        )
+    }
+
+    render() {
         return (
             <div className="container">
                 <br></br>
@@ -24,8 +33,8 @@ class TaskList extends Component {
                     </thead>
                     <tbody>
                         {
-                            this.state.tasks.map(function(name, index){
-                                return <TodoList  name={name}/>
+                            this.state.tasks.map(function (name, index) {
+                                return <TodoList name={name} />
                             }.bind(this))
                         }
                     </tbody>
@@ -34,5 +43,5 @@ class TaskList extends Component {
         )
     }
 }
- 
+
 export default TaskList;
