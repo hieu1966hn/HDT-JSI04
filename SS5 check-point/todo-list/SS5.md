@@ -1,0 +1,1 @@
+State: Dùng để biểu diễn trạng thái của component. Tức là giá trị của state có thể thay đổi được, trái ngược hoàn thoàn với props là 1 giá trị bất biến
