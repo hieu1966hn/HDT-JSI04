@@ -4,8 +4,9 @@ class NoiDung extends Component {
 
     componentWillReceiveProps(nextProps, nextState) {
         console.log("componentWillReceiveProps của NoiDung.js");
+        console.log(this.props.ten);
     }
-
+    
     shouldComponentUpdate(nextProps, nextState) {
         console.log("shouldComponentUpdate của NoiDung.js");
         return true;
@@ -24,6 +25,7 @@ class NoiDung extends Component {
 
 
     render() {
+        
         return (
             <div>
                 <h4>{this.props.ten} Xin chào mọi người</h4>

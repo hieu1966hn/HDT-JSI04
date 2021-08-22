@@ -52,7 +52,7 @@ class App extends Component {
 
   render() {
     console.log("render đã chạy");
-    // console.log(this.state.trangthai);
+    console.log(this.state.trangthai);
     return (
       <div className="App">
         <NoiDung ten={this.state.trangthai2}></NoiDung>
