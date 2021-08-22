@@ -27,10 +27,14 @@ class App extends Component {
 
   shouldComponentUpdate(nextProps, nextState){
     console.log("shouldComponentUpdate đã chạy");
+    return true;
   }
+// chay được
+
 
   componentWillUpdate(nextProps, nextState){
     console.log("componentWillUpdate đã chạy");
+
   }
 
   componentDidUpdate(nextProps, nextState){
@@ -38,11 +42,14 @@ class App extends Component {
   }
 
   capNhatState= ()=>{
-
+    this.setState({
+      trangthai: "Trạng thái đã được update"
+    })
   }
 
   render() {
     console.log("render đã chạy");
+    console.log(this.state.trangthai);
     return (
       <div className="App">
         <button onClick={()=>this.capNhatState()}>Click</button>
