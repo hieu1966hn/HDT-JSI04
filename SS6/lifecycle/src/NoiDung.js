@@ -1,8 +1,30 @@
 import React, { Component } from 'react';
 
 class NoiDung extends Component {
+
+    componentWillReceiveProps(nextProps, nextState) {
+        console.log("componentWillReceiveProps của NoiDung.js");
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log("shouldComponentUpdate của NoiDung.js");
+        return true;
+    }
+    // chay được
+
+
+    componentWillUpdate(nextProps, nextState) {
+        console.log("componentWillUpdate của NoiDung.js");
+
+    }
+
+    componentDidUpdate(nextProps, nextState) {
+        console.log("componentDidUpdate của NoiDung.js");
+    }
+
+
     render() {
-        return(
+        return (
             <div>
                 <h4>{this.props.ten} Xin chào mọi người</h4>
             </div>

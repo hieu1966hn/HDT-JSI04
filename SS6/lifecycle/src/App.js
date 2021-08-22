@@ -27,32 +27,32 @@ class App extends Component {
   }
 
 
-  shouldComponentUpdate(nextProps, nextState){
-    console.log("shouldComponentUpdate đã chạy");
-    return true;
-  }
-// chay được
+//   shouldComponentUpdate(nextProps, nextState){
+//     console.log("shouldComponentUpdate đã chạy");
+//     return true;
+//   }
+// // chay được
 
 
-  componentWillUpdate(nextProps, nextState){
-    console.log("componentWillUpdate đã chạy");
+//   componentWillUpdate(nextProps, nextState){
+//     console.log("componentWillUpdate đã chạy");
 
-  }
+//   }
 
-  componentDidUpdate(nextProps, nextState){
-    console.log("componentDidUpdate đã chạy");
-  }
+//   componentDidUpdate(nextProps, nextState){
+//     console.log("componentDidUpdate đã chạy");
+//   }
 
   capNhatState= ()=>{
     this.setState({
-      trangthai: "Trạng thái đã được update",
-      trangthai2: "Trung Hiếu"
+      trangthai: "Cập nhật 1",
+      trangthai2: "Cập nhật 2"
     })
   }
 
   render() {
     console.log("render đã chạy");
-    console.log(this.state.trangthai);
+    // console.log(this.state.trangthai);
     return (
       <div className="App">
         <NoiDung ten={this.state.trangthai2}></NoiDung>
