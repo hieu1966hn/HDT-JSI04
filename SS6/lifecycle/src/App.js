@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
+import NoiDung from './NoiDung'
 
 class App extends Component {
   // sử dụng với state
@@ -10,6 +11,7 @@ class App extends Component {
     // khoi tao state
     this.state = {
       trangthai: "Khởi tạo",
+      trangthai2: "Khởi tạo"
     };
   }
 
@@ -43,7 +45,8 @@ class App extends Component {
 
   capNhatState= ()=>{
     this.setState({
-      trangthai: "Trạng thái đã được update"
+      trangthai: "Trạng thái đã được update",
+      trangthai2: "Trung Hiếu"
     })
   }
 
@@ -52,7 +55,8 @@ class App extends Component {
     console.log(this.state.trangthai);
     return (
       <div className="App">
-        <button onClick={()=>this.capNhatState()}>Click</button>
+        <NoiDung ten={this.state.trangthai2}></NoiDung>
+        <button onClick={()=>this.capNhatState()}>Click để update state</button>
       </div>
     );
 
