@@ -5,6 +5,7 @@ class NoiDung extends Component {
     componentWillReceiveProps(nextProps, nextState) {
         console.log("componentWillReceiveProps của NoiDung.js");
         console.log(this.props.ten);
+        console.log(nextProps);
     }
     
     shouldComponentUpdate(nextProps, nextState) {

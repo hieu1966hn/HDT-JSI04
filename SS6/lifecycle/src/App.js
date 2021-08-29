@@ -22,28 +22,28 @@ class App extends Component {
 
   }
 
-  componentDidMount(){
+  componentDidMount() {
     console.log("componentDidMount đã chạy");
   }
 
 
-//   shouldComponentUpdate(nextProps, nextState){
-//     console.log("shouldComponentUpdate đã chạy");
-//     return true;
-//   }
-// // chay được
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log("shouldComponentUpdate đã chạy");
+    return true;
+  }
+  // chay được
 
 
-//   componentWillUpdate(nextProps, nextState){
-//     console.log("componentWillUpdate đã chạy");
+  componentWillUpdate(nextProps, nextState) {
+    console.log("componentWillUpdate đã chạy");
 
-//   }
+  }
 
-//   componentDidUpdate(nextProps, nextState){
-//     console.log("componentDidUpdate đã chạy");
-//   }
+  componentDidUpdate(nextProps, nextState) {
+    console.log("componentDidUpdate đã chạy");
+  }
 
-  capNhatState= ()=>{
+  capNhatState = () => {
     this.setState({
       trangthai: "Cập nhật 1",
       trangthai2: "Cập nhật 2"
@@ -56,12 +56,24 @@ class App extends Component {
     return (
       <div className="App">
         <NoiDung ten={this.state.trangthai2}></NoiDung>
-        <button onClick={()=>this.capNhatState()}>Click để update state</button>
+        <button onClick={() => this.capNhatState()}>Click để update state</button>
       </div>
     );
 
   }
 
 }
+
+// class App extends Component {
+//   render() {
+//     return (
+//        <div className="App">
+
+//        </div>
+//     );
+//   }
+// }
+
+
 
 export default App;
