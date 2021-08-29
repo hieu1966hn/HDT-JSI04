@@ -65,8 +65,56 @@ class Topics extends Component {
     return (
       <div>
         <h2>Topics</h2>
+        <ul>
+          <li>
+            <Link to={`${this.props.match.url}/rendering`}>
+              Rendering with React
+            </Link>
+          </li>
+
+          <li>
+            <Link to={`${this.props.match.url}/components`}>
+              Components
+            </Link>
+          </li>
+
+          <li>
+            <Link to={`${this.props.match.url}/props-v-state`}>
+              Components
+            </Link>
+          </li>
+        </ul>
+
+        <div className="secondary-route-place">
+          <Route 
+          path={`${this.props.match.url}/:topicld`}
+          component={Topic}
+          />
+
+          <Route
+          exact 
+          path = {this.props.match.url}
+          render={()=>
+            <h3>Plesse selectopic</h3>
+          }
+          />
+
+        </div>
       </div>
     );
+  }
+}
+
+
+class Topic extends Component{
+  render(){
+    return(
+      <div>
+        <h3>
+          {this.props.match.params.topicld}
+        </h3>
+      </div>
+    )
   }
 }
 
