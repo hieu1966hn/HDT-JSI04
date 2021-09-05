@@ -37,7 +37,7 @@ class App extends Component {
 }
 
 
-
+// khai bao trang home
 class Home extends Component {
   render() {
     return (
@@ -60,6 +60,7 @@ class About extends Component {
 }
 
 
+
 class Topics extends Component {
   render() {
     return (
@@ -80,23 +81,22 @@ class Topics extends Component {
 
           <li>
             <Link to={`${this.props.match.url}/props-v-state`}>
-              Components
+              props-v-state
             </Link>
           </li>
         </ul>
 
         <div className="secondary-route-place">
-          <Route 
-          path={`${this.props.match.url}/:topicld`}
-          component={Topic}
-          />
-
           <Route
-          exact 
-          path = {this.props.match.url}
-          render={()=>
-            <h3>Plesse selectopic</h3>
-          }
+            path={`${this.props.match.url}/:topicld`}
+            component={Topic}
+          />
+          <Route
+            exact
+            path={this.props.match.url}
+            render={() =>
+              <h3>Plesse selectopic</h3>
+            }
           />
 
         </div>
@@ -106,9 +106,10 @@ class Topics extends Component {
 }
 
 
-class Topic extends Component{
-  render(){
-    return(
+
+class Topic extends Component {
+  render() {
+    return (
       <div>
         <h3>
           {this.props.match.params.topicld}
