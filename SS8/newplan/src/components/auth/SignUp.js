@@ -14,7 +14,7 @@ class SignUp extends Component {
 
   // khoi tao phuong thuc hanldeChange
   handleChange = (e) => {
-    this.setState = ({
+    this.setState({
       [e.target.id]: e.target.value
     })
   }
@@ -38,17 +38,17 @@ class SignUp extends Component {
 
           <div className="input-field">
             <label htmlFor="password">Password</label>
-            <input type="password" id="password" />
+            <input type="password" id="password" onChange={this.handleChange} />
           </div>
 
 
           <div className="input-field">
             <label htmlFor="firstName">First Name</label>
-            <input type="text" id="firstName" />
+            <input type="text" id="firstName" onChange={this.handleChange} />
           </div>
           <div className="input-field">
             <label htmlFor="lastName">Last Name</label>
-            <input type="text" id="lastName" />
+            <input type="text" id="lastName" onChange={this.handleChange} />
           </div>
 
           <div className="input-field">
