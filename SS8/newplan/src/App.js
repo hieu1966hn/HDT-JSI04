@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Navbar from "./components/layout/Navbar";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Dashboard from "./components/dashboard/Dashboard";
+import ProjectDetails from "./components/project/ProjectDetails";
 
 
 class App extends Component {
@@ -12,7 +13,8 @@ class App extends Component {
           <Navbar />
 
           <Switch>
-            <Route path='/' component={Dashboard} />
+            <Route exact path='/' component={Dashboard} />
+            <Route path="/project/:id" component={ProjectDetails} />
           </Switch>
 
 
