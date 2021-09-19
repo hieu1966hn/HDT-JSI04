@@ -33,6 +33,10 @@ class SignIn extends Component {
             <label htmlFor="password">Password</label>
             <input type="password" id="password" onChange={this.handleChange} />
           </div>
+
+          <div className="input-field">
+            <button className="btn pink lighten-1 z-depth-0" type="submit">Sign In</button>
+          </div>
         </form>
       </div>
     )
