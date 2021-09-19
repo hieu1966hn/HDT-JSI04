@@ -1,10 +1,14 @@
 import ProjectSummary from "./ProjectSummary"
 
 
-const ProjectList = () => {
+const ProjectList = ({ projects }) => {
   return (
     <div className="project-list section">
-
+      {projects && projects.map(project => {
+        return (
+          <ProjectSummary project={project} key={project.id}></ProjectSummary>
+        )
+      })}
       {/* 
       <div className="card z-depth-0 project-summary">
         <div className="card-content grey-text text-darken-3">
@@ -31,9 +35,9 @@ const ProjectList = () => {
           <p>3rd Semtember, 11h58 am</p>
         </div>
       </div> */}
+      {/* <ProjectSummary />
       <ProjectSummary />
-      <ProjectSummary />
-      <ProjectSummary />
+      <ProjectSummary /> */}
 
     </div>
   )

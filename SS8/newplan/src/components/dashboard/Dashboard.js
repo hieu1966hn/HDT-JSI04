@@ -5,14 +5,16 @@ import { connect } from "react-redux"
 
 class Dashboard extends Component {
   render() {
-    console.log(this.props);
+    // console.log(this.props.projects);
+    const { projects } = this.props // desubstring: viết gọn lại cú pháp truy vấn.
+    console.log(projects);
     return (
       <div className="dashboard container">
         <div className="row">
 
 
           <div className="col s12 m6">
-            <ProjectList />
+            <ProjectList projects={projects} />
           </div>
 
           <div className="col s12 m5 offset-m1">
