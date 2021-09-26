@@ -10,3 +10,6 @@ SS11
 
 - Redux Thunk là 1 Middleware cho phép mình viết các Action trả về 1 hàm thay vì 1 "plain js object" bằng cách trì hoãn việc đưa action đến reducer.
 - Redux Thunk đc sử dụng để xử lý các logic bất đồng bộ phức tạp cần truy cập tới store (redux) hoặc đơn giản là việc lấy dữ liệu như Ajax request.
+
+- firestore Data & Collection:
+  - firestore is a NoSQL database
